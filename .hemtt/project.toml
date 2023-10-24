@@ -1,0 +1,7 @@
+name = "Arma 3 Essentials"
+author = "Dikus"
+prefix = "a3e"
+mainprefix = "z"
+
+[version]   
+git_hash = 0

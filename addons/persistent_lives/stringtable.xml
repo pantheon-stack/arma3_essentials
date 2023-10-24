@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="A3E Persitent Lives">
+	<Package name="Configuration">
+		<Container name="Menu">
+      <Key ID="STR_a3e_persistent_lives_CATEGORY">
+				<Original>A3E Essentials Lives</Original>
+				<English>A3E Essentials Lives</English>
+				<Spanish>A3E Essentials Vidas</Spanish>
+			</Key>
+			<Key ID="STR_a3e_persistent_lives_ENABLED_TITLE">
+				<Original>Enable Lives</Original>
+				<English>Enable Lives</English>
+				<Spanish>Habilitar Vidas</Spanish>
+			</Key>
+			<Key ID="STR_a3e_persistent_lives_QUANTITY_TITLE">
+        <Original>Number of Lives</Original>
+				<English>Number of Lives</English>
+				<Spanish>Cantidad de Vidas</Spanish>
+			</Key>
+		</Container>
+    <Container name="Tooltip">
+      <Key ID="STR_a3e_persistent_lives_ENABLED_DESCRIPTION">
+				<Original>Enable limited lives mode</Original>
+				<English>Enable limited lives mode</English>
+				<Spanish>Habilita el modo de vidas limitadas</Spanish>
+			</Key>
+			<Key ID="STR_a3e_persistent_lives_QUANTITY_DESCRIPTION">
+				<Original>Set number of lives per player, 0 to disable. Using SteamID</Original>
+				<English>Set number of lives per player, 0 to disable. Using SteamID</English>
+				<Spanish>Ajustar la cantidad de vidas por jugador, 0 para deshabilitar. Usando el SteamID</Spanish>
+			</Key>
+		</Container>
+	</Package>
+</Project>
