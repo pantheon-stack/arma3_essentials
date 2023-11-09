@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="A3E Main">
+	<Package name="Configuration">
+		<Container name="Menu">
+			<Key ID="STR_a3e_main_CATEGORY">
+				<Original>A3E Essentials</Original>
+				<English>A3E Essentials</English>
+				<Spanish>A3E Essentials</Spanish>
+			</Key>
+			<Key ID="STR_a3e_main_DEBUG">
+				<Original>Enable Debug</Original>
+				<English>Enable Debug</English>
+				<Spanish>Habilitar Depuración</Spanish>
+			</Key>
+		</Container>
+    	<Container name="Tooltip">
+      		<Key ID="STR_a3e_main_DEBUG_DESCRIPTION">
+				<Original>Enable debug mode</Original>
+				<English>Enable debug mode</English>
+				<Spanish>Habilita el modo de depuración</Spanish>
+			</Key>
+		</Container>
+	</Package>
+</Project>

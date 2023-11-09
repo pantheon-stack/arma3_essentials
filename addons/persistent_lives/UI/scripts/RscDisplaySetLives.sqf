@@ -52,8 +52,8 @@ switch (_mode) do {
 			_player = _all_players select { name _x == _player_name };
 			_player = _player # 0;
 
-			_logic setVariable ["NumberOfLives", _lives];
-			_logic synchronizeObjectsAdd [_player];
+			_logic setVariable ["NumberOfLives", _lives, true];
+			_logic setVariable ["Player", _player, true];
 		};
 	};
 

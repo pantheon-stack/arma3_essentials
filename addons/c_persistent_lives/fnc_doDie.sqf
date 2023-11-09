@@ -7,13 +7,12 @@
 params [ [ "_player", player ] ];
 private [ "_uid", "_total_lives", "_remaining_lives" ];
 
-if (not local _player) exitWith {
+if (! (local _player)) exitWith {
   false;
 };
 
-waitUntil {
-  sleep 1;
-  missionNamespace getVariable ["a3e_lives_system_init", false];
+if (! (missionNamespace getVariable ["a3e_lives_system_init", false])) exitWith {
+  false;
 };
 
 _uid = "lives_" + (getPlayerUID _player);

@@ -26,8 +26,10 @@ switch (_mode) do {
 
 			waitUntil {
 				sleep 1;
-				_players = synchronizedObjects _logic;
-				count _players > 0;
+				_variable_player = !isNull (_logic getVariable ["Player", objNull]);
+				_sync_players = count (synchronizedObjects _logic) > 0;
+				[format ["_variable_player %1, _sync_players %2", _variable_player, _sync_players]] call FUNC_INNER(main,debug);
+				_variable_player || _sync_players;
 			};
 
 			["registeredToWorld3DEN",[_logic]] spawn FUNC(moduleSetLives);
@@ -37,13 +39,21 @@ switch (_mode) do {
 	case "registeredToWorld3DEN": {
 		// todo considerar casos en que se sincronizan grupos
 		_lives = _logic getVariable ["NumberOfLives", -1];
+		_player = _logic getVariable ["Player", objNull];
 		_type = parseNumber (_logic getVariable ["Units", "0"]);
 
 		private _players = [];
-		if ( _type == 0 ) then {
-			_players = synchronizedObjects _logic;
-		} else {
+
+		if ( _type != 0 && isNull _player ) exitWith {
 			["Unit type %1 is not implemented yet on module %2",_type,typeof _logic] call bis_fnc_error;
+		};
+
+		if ( _type == 0 && isNull _player ) then {
+			_players = synchronizedObjects _logic;
+		};
+
+		if ( !isNull _player ) then {
+			_players = [_player];
 		};
 
 		if ( (count _players) > 0 ) then {

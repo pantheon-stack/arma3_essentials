@@ -3,5 +3,5 @@ author = "Dikus"
 prefix = "a3e"
 mainprefix = "z"
 
-[version]   
+[version]
 git_hash = 0

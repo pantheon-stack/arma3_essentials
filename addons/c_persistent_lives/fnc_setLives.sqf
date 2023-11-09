@@ -18,9 +18,9 @@
 params [ [ "_lives", 0 ], [ "_player", player ], [ "_force", false ] ];
 private [ "_uid" ];
 
-waitUntil {
-  sleep 1;
-  missionNamespace getVariable ["a3e_lives_system_init", false];
+_has_init = missionNamespace getVariable ["a3e_lives_system_init", false];
+if (!_has_init) exitWith {
+  false;
 };
 
 _uid = "lives_" + (getPlayerUID _player);
@@ -54,3 +54,5 @@ if ( _lives_enabled ) exitWith {
 
   missionNamespace setVariable [ _uid, _player_lives, true ];
 };
+
+true;

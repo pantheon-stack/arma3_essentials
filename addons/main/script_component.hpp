@@ -2,6 +2,7 @@
 #include "\z\a3e\addons\main\script_mod.hpp"
 
 #define DISABLE_COMPILE_CACHE
+#define A3E_DEBUG true
 
 #ifdef DEBUG_ENABLED_MAIN
     #define DEBUG_MODE_FULL

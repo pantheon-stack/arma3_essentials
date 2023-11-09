@@ -15,3 +15,5 @@ class CfgPatches {
 };
 
 PRELOAD_ADDONS;
+
+#include "\z\a3e\addons\persistent_lives\CfgEventHandlers.hpp"

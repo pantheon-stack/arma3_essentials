@@ -1,7 +1,7 @@
 #define MAINPREFIX z
 #define PREFIX a3e
 
-#include "script_version.hpp"
+#include "\z\a3e\addons\main\script_version.hpp"
 
 #define VERSION     MAJOR.MINOR
 #define VERSION_STR MAJOR.MINOR.PATCH.BUILD
