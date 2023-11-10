@@ -22,13 +22,10 @@ switch (_mode) do {
 		//--- Call effects (not in 3DEN, "registeredToWorld3DEN" handler is called automatically)
 		if (_activated && !is3DEN) then {
 
-			// load view?
-
 			waitUntil {
 				sleep 1;
 				_variable_player = !isNull (_logic getVariable ["Player", objNull]);
 				_sync_players = count (synchronizedObjects _logic) > 0;
-				[format ["_variable_player %1, _sync_players %2", _variable_player, _sync_players]] call FUNC_INNER(main,debug);
 				_variable_player || _sync_players;
 			};
 

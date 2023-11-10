@@ -9,11 +9,11 @@
 params [ [ "_player", player ] ];
 private ["_uid", "_player_lives", "_remaining_lives", "_msg"];
 
-if ( isServer && !local _player ) then {
+if ( isServer && !local _player ) exitWith {
 	remoteExec [QFUNC(hintLives), _player];
 };
 
-if (hasInterface && local _player) then {
+if (hasInterface && local _player) exitWith {
 	_uid = "lives_" + (getPlayerUID _player);
     _player_lives = missionNamespace getVariable [ _uid, [false, 0] ];
 	_remaining_lives = _player_lives select 1;

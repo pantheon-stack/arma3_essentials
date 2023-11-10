@@ -39,7 +39,13 @@ if ( _force ) exitWith {
   
   missionNamespace setVariable [ _uid, _player_lives, true ];
 
-  [_player] call FUNC(hintLives);
+  _is_dead = _player getVariable ["a3e_is_dead", false];
+  if ( _is_dead ) then {
+    [_player] call FUNC(doRevive);
+  } else {
+    [_player] call FUNC(hintLives);
+  };
+  true;
 };
 
 if ( _lives_enabled ) exitWith {
@@ -53,6 +59,7 @@ if ( _lives_enabled ) exitWith {
   };
 
   missionNamespace setVariable [ _uid, _player_lives, true ];
+  true;
 };
 
-true;
+false;

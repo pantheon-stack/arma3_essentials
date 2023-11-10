@@ -11,7 +11,7 @@
 			ARRAY - Move to precise [x,y,z] position AGL. [x,y] array will be converted to [x,y,0]
 */
 
-params [ ["_player", player], ["_position", null] ];
+params [ ["_player", player], ["_position", objNull] ];
 
 if (!(local _player)) exitWith {
   false;
