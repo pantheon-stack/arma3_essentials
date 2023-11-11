@@ -55,7 +55,8 @@ switch (_mode) do {
 
 		if ( (count _players) > 0 ) then {
 			{
-				[ _lives, _x, true ] call FUNC(setLives);
+				// [ _lives, _x, true ] call QFUNC(setLives);
+				[ [ _lives, _x, true ] ] remoteExec [QFUNC(setLives), _x];
 			} forEach _players;
 		} else {
 			["No se ha seleccionado un jugador en el modulo %1",typeof _logic] call bis_fnc_error;
