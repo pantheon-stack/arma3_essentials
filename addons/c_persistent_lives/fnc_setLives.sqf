@@ -18,6 +18,8 @@
 params [ [ "_lives", 0 ], [ "_player", player ], [ "_force", false ] ];
 private [ "_uid" ];
 
+format ["params %1, %2 (Local %3), %4",_lives, _player, local _player, _force] call FUNC_INNER(main,debug);
+
 _has_init = missionNamespace getVariable ["a3e_lives_system_init", false];
 if (!_has_init || !(local _player)) exitWith {
   false;
