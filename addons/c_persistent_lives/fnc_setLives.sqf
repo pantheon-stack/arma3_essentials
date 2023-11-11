@@ -19,7 +19,7 @@ params [ [ "_lives", 0 ], [ "_player", player ], [ "_force", false ] ];
 private [ "_uid" ];
 
 _has_init = missionNamespace getVariable ["a3e_lives_system_init", false];
-if (!_has_init) exitWith {
+if (!_has_init || !(local _player)) exitWith {
   false;
 };
 

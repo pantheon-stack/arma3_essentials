@@ -91,7 +91,8 @@ if (hasInterface && local player) then {
     player addMPEventHandler ["MPRespawn", {
       params ["_unit", "_corpse"];
 
-      if (missionNamespace getVariable ["a3e_lives_system_init", false]) then {
+      _has_init = missionNamespace getVariable ["a3e_lives_system_init", false];
+      if ( _has_init && local _unit ) then {
         _uid = "lives_" + (getPlayerUID _unit);
         _player_lives = missionNamespace getVariable [ _uid, [false, 0] ];
 
