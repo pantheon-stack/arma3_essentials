@@ -6,8 +6,7 @@
   [ player] call A3E_fnc_disableLives;
   [ ] call A3E_fnc_disableLives;
 
-	Deshabilita la cantidad de vidas para todo jugador
-    si no entrega parametro o del jugador.
+	Not implemented yet
 
 */
 params [ [ "_player", objNull ] ];

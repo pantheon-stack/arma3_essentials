@@ -1,4 +1,5 @@
-PREP(initLives);
+PREP(initLivesServer);
+PREP(initLivesClient);
 PREP(setLives);
 PREP(moduleSetLives);
 PREP(doDie);
